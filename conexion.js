@@ -29,24 +29,24 @@ conexion.sync({force:false})
 .catch((err)=>{
     console.log("Error al conectarse a MYSQL de PlanetScale "+err);
     console.log("Intentar una conexion Local");
-    db = process.env.DB_MYSQL_LOCAL;
-    usuario = process.env.USUARIO_MYSQL_LOCAL;
-    password = process.env.PASSWORD_MYSQL_LOCAL;
-    host = process.env.HOST_MYSQL_LOCAL;
-    port = process.env.PORT_MYSQL_LOCAL;
+    // db = process.env.DB_MYSQL_LOCAL;
+    // usuario = process.env.USUARIO_MYSQL_LOCAL;
+    // password = process.env.PASSWORD_MYSQL_LOCAL;
+    // host = process.env.HOST_MYSQL_LOCAL;
+    // port = process.env.PORT_MYSQL_LOCAL;
 
-    conexion = new Sequelize(db,usuario,password,{
-        host:host,
-        port:port,
-        dialect: 'mysql'
-        });
-        conexion.sync({force:false})
-        .then(()=>{
-            console.log("Conectado a MYSQL Local");
-        })
-        .catch((err)=>{
-            console.log("Error al conectarse a MYSQL Local");
-        });
+    // conexion = new Sequelize(db,usuario,password,{
+    //     host:host,
+    //     port:port,
+    //     dialect: 'mysql'
+    //     });
+    //     conexion.sync({force:false})
+    //     .then(()=>{
+    //         console.log("Conectado a MYSQL Local");
+    //     })
+    //     .catch((err)=>{
+    //         console.log("Error al conectarse a MYSQL Local");
+    //     });
 });
 
 var Usuario = UsuarioModelo(conexion);
