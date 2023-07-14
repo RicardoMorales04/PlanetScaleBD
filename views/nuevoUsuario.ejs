@@ -1,0 +1,17 @@
+<%- include("templates/encabezado")%>
+<%- include("templates/menu")%>
+<h1>NUEVO USUARIO</h1>
+<form action="/capturarUsuario" method="post" id="formulario">
+    <div>
+        <input type="text" name="nombre" id="nombre" placeholder="Nombre" autofocus>
+        <span id="mensajeNombre"></span>
+        <input type="text" name="usuario" id="usuario" placeholder="Usuario" >
+        <span id="mensajeUsuario"></span>
+        <input type="password" name="password" id="password" placeholder="Contraseña" >
+        <span id="mensajePassword"></span>
+    </div> 
+    <div>
+        <button type="submit">Guardar usuario</button>
+    </div>
+</form>
+<%- include("templates/pie")%>
